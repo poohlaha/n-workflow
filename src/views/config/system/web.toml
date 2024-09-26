@@ -1,0 +1,71 @@
+[WEB]
+[WEB.BACKSTAGE] # web 后台
+name = 'web_backstage'
+text = 'Web 后台'
+
+[WEB.BACKSTAGE.W_1920]
+name = 'web_backstage_1920'
+text = '网页 1920'
+width = 1920
+height = 1080
+
+[WEB.BACKSTAGE.W_1440]
+name = 'web_backstage_1440'
+text = '网页 1440'
+width = 1440
+height = 1024
+
+[WEB.BACKSTAGE.MACBOOK_PRO_16]
+name = 'web_backstage_mackbook_pro_16'
+text = 'MacBook Pro 16“'
+width = 1728
+height = 1117
+
+[WEB.BACKSTAGE.MACBOOK_PRO_14]
+name = 'web_backstage_mackbook_pro_14'
+text = 'MacBook Pro 14“'
+width = 1512
+height = 982
+
+[WEB.BACKSTAGE.MACBOOK_PRO]
+name = 'web_backstage_mackbook_pro'
+text = 'MacBook Pro'
+width = 1440
+height = 900
+
+[WEB.BACKSTAGE.MACBOOK_AIR_13]
+name = 'web_backstage_mackbook_air_13'
+text = 'MacBook Air 14“'
+width = 1280
+height = 832
+
+[WEB.BACKSTAGE.IMAC]
+name = 'web_backstage_imac'
+text = 'MacBook iMac'
+width = 2240
+height = 1260
+
+[WEB.BACKSTAGE.HUAWEI_MATEBOOK_16s]
+name = 'web_backstage_huawei_matebook_16s'
+text = '华为 MateBook 16s'
+width = 1260
+height = 840
+
+[WEB.BACKSTAGE.HUAWEI_MATEBOOK_14s]
+name = 'web_backstage_huawei_matebook_14s'
+text = '华为 MateBook 14s'
+width = 1260
+height = 840
+
+[WEB.BACKSTAGE.CUSTOM]
+name = 'web_backstage_custom'
+text = '自定义'
+width = 1024
+height = 768
+
+
+[WEB.WEBSITE] # web 后台
+name = 'web_website'
+text = 'Web 网站'
+width = 1920
+height = 1080

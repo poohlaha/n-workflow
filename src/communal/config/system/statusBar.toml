@@ -1,0 +1,10 @@
+# 状态栏属性配置
+name = '状态栏'
+height = 44
+
+[style]
+borderColor = 'unset'
+borderWidth = '0px'
+borderStyle = 'none'
+fontWeight = 'normal'
+fontStyle = 'normal'

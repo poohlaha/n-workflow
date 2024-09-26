@@ -1,0 +1,70 @@
+# 设备列表
+# IPHONE
+[IPHONE]
+[IPHONE.IPHONE_14_PRO_MAX]
+name = 'iphone_14_pro_max'
+text = 'iPhone 14 Pro Max'
+width = 430
+height = 932
+
+[IPHONE.IPHONE_14_PRO]
+name = 'iphone_14_pro'
+text = 'iPhone 14 Pro'
+width = 393
+height = 852
+
+[IPHONE.IPHONE_14_plus_13_PRO_MAX]
+name = 'iphone_14_plus_13_pro_max'
+text = 'iPhone 14 plus/13 Pro Max'
+width = 428
+height = 926
+
+[IPHONE.IPHONE_14_13_PRO]
+name = 'iphone_14_13_pro'
+text = 'iPhone 14/13 Pro'
+width = 390
+height = 844
+
+[IPHONE.IPHONE_12_PRO_MAX]
+name = 'iphone_12_pro_max'
+text = 'iPhone 12 Pro Max'
+width = 428
+height = 926
+
+[IPHONE.IPHONE_12_PRO]
+name = 'iphone_12_pro'
+text = 'iPhone 12 Pro/12'
+width = 390
+height = 844
+
+[IPHONE.IPHONE_11_PRO]
+name = 'iphone_11_pro'
+text = 'iPhone 11 Pro/X'
+width = 375
+height = 812
+
+[IPHONE.IPHONE_11_PRO_MAX]
+name = 'iphone_11_pro_max'
+text = 'iPhone 11 Pro Max/11'
+width = 414
+height = 896
+
+[IPHONE.IPHONE_SE]
+name = 'iphone_se'
+text = 'iPhone SE'
+width = 320
+height = 568
+
+# ANDROID
+[ANDROID]
+[ANDROID.HUAWEI_P40]
+name = 'Huawei_p40'
+text = 'Huawei P40'
+width = 360
+height = 780
+
+[ANDROID.GOOGLE_PIXED_2_XL]
+name = 'google_pixel_2_xl'
+text = 'Google Pixel 2 XL'
+width = 411
+height = 823

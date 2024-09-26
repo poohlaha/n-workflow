@@ -1,0 +1,16 @@
+# 底栏矩形属性配置
+name = '底栏'
+height = 44
+
+[style]
+backgroundColor = 'rgb(248, 248, 248)'
+borderColor = 'rgba(255, 0, 0, 0)'
+borderWidth = '1px'
+borderStyle = 'solid'
+fontSize = '14px'
+padding = '0px'
+textAlign = 'center'
+lineHeight = '20px'
+fontWeight = 'normal'
+fontStyle = 'normal'
+

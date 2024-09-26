@@ -1,0 +1,19 @@
+#side bar config
+
+# 内置组件
+[InnerComponent]
+name = '内置组件'
+shortcutKey = 1
+portalCls = 'inner-component-popup'
+
+# 我的组件
+[MyComponent]
+name = '我的组件'
+shortcutKey = 2
+portalCls = 'my-component-popup'
+
+[MyComponent.content]
+title1 = '创建组件'
+content1 = '选择一个组件，右键选择”添加到我的组件”，也可以点击”新建组件”按钮。'
+title2 = '管理组件'
+content2 = '素材库可以轻松管理您的个人组件和共用组件，并进行团队协作的分享。 '

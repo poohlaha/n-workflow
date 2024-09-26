@@ -4,12 +4,12 @@
  * @author poohlaha
  */
 import React from 'react'
-import GlobalLoading from '@views/components/loading'
+import Loading from '@views/components/loading'
 
 const FirstScreen = () => {
   return (
     <div className="first-screen">
-      <GlobalLoading show={true} />
+      <Loading show={true} />
     </div>
   )
 }

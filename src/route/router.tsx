@@ -7,7 +7,7 @@ import React from 'react'
 import { RouteInterface } from '@router/router.interface'
 import RouterUrls from '@route/router.url.toml'
 const { lazy } = React
-import Home from '@pages/home'
+import Home from 'src/views/pages/design'
 
 export const routes: RouteInterface[] = [
   {

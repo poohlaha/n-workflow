@@ -1,0 +1,122 @@
+# 全局样式
+[RESET]
+# 浮动布局
+[RESET.FLOAT]
+name = 'float'
+text = '浮动布局'
+values = ['float-left', 'float-right']
+
+# flex布局
+[RESET.FLEX]
+name = 'flex'
+text = 'flex布局'
+values = ['flex', 'flex-center', 'flex-align-start', 'flex-align-center', 'flex-align-end', 'flex-jsc-start', 'flex-jsc-center', 'flex-jsc-end', 'flex-jsc-between', 'flex-jsc-around', 'flex-direction-column', 'flex-wrap', 'flex-nowrap', 'flex-1', 'flex-2', 'flex-3', 'flex-4', 'flex-5']
+
+# 定位
+[RESET.POSITION]
+name = 'position'
+text = '定位'
+values = ['position-relative', 'position-absolute', 'position-static', 'position-sticky', 'position-fixed']
+
+# 文本对齐
+[RESET.TEXT]
+name = 'text'
+text = '文本对齐'
+values = ['text-l', 'text-c', 'text-r']
+
+# 宽高百分比
+[RESET.WH_PERCENTAGE]
+name = 'whPercentage'
+text = '宽高百分比'
+values = ['wh100', 'w100', 'h100']
+
+# 文本超出省略
+[RESET.TEXT_OVER]
+name = 'textOver'
+text = '文本超出省略'
+values = ['over-ellipsis', 'over-three-ellipsis', 'over-two-ellipsis', 'line-break']
+
+# 滚动条
+[RESET.SCROLL]
+name = 'scroll'
+text = '滚动条'
+values = ['x-scroll', 'y-scroll']
+
+# 遮罩层
+[RESET.MASK]
+name = 'mask'
+text = '遮罩层'
+values = ['mark']
+
+[COMMON]
+# 卡片
+[COMMON.CARD]
+name = 'card'
+text = '卡片'
+values = ['card']
+backgrounds = ['card-bg', 'card-gray-bg']
+childrens = ['card-top-margin', 'card-bottom-margin', 'card-left-margin', 'card-right-margin', 'card-no-margin', 'card-no-top-margin', 'card-no-margin-lr', 'card-no-margin-tb', 'card-no-padding', 'card-no-top-padding', 'card-no-bottom-padding', 'card-no-padding-lr', 'card-no-padding-tb', 'card-indent', 'card-title', 'card-desc-status', 'card-desc', 'card-text', 'card-gray', 'separator', 'card-cloth', 'card-right-icon', 'card-footer']
+childrensName = 'other'
+childrensText = '卡片其他样式'
+
+# 线条
+[COMMON.BORDER]
+name = 'border'
+text = '线条'
+values = ['border-left', 'border-right', 'border-top', 'border-bottom']
+
+# 按钮父容器
+[COMMON.BUTTONS]
+name = 'buttons'
+text = '按钮父容器'
+values = ['buttons']
+backgrounds = ['fill', 'fiexed']
+childrens = ['btn-default', 'btn-cancel', 'button-dashed', 'radius']
+childrensName = 'button'
+childrensText = '按钮'
+
+# 详情类按钮
+[COMMON.BUTTON_DETAIL]
+name = 'buttonDetail'
+text = '详情类按钮'
+values = ['button-detail']
+backgrounds = ['button-detail', 'fill-space', 'gray']
+
+# 字体
+[COMMON.TEXT]
+name = 'font'
+text = '字体'
+values = ['font-bold', 'font-medium']
+
+# 页面设置
+[COMMON.PAGE]
+name = 'page'
+text = '页面设置'
+values = ['m-page', 'page-bg', 'page-bg-theme', 'page-padding', 'page-white', 'page-bg-liner', 'page-title', 'page-top-bg']
+
+# 组件
+# 输入框
+[COMMON.INPUT]
+name = 'input'
+text = '输入框'
+values = ['input', 'border']
+
+# 密码框
+[COMMON.INPUT_PASSWORD]
+name = 'inputPassword'
+text = '密码框'
+values = ['input-password']
+
+# 公共样式
+[COMMON.COMMON]
+name = 'common'
+text = '公共样式'
+values = ['theme-color', 'svg-icon', 'status', 'desc', 'del-line', 'no-data', 'title-line', 'list-item', 'tips', 'notice']
+
+
+
+
+
+
+
+

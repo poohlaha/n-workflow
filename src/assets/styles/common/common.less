@@ -1,0 +1,86 @@
+// 全局导航栏
+.navigation {
+  background: #ffffff;
+  height: 48px;
+  padding: 0 16px;
+
+  .title {
+    font-size: @font;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+}
+
+// svg
+.svg-box {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  &:hover {
+    background: @background_hover;
+    border-radius: @border_radius;
+  }
+
+  .svg-icon {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+// 主题样式
+.theme-color {
+  color: @theme;
+}
+
+// tooltip
+.tooltip {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  color: @color;
+  display: none;
+  font-size: @font_small;
+  min-width: 120px;
+  padding: 4px 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+
+  .tooltip-item {
+    position: relative;
+
+    .tooltip-item-content {
+      height: 32px;
+      padding: 0 10px;
+
+      &:hover {
+        background: @background_hover;
+        color: @theme;
+      }
+    }
+
+    .tooltip-item-underline {
+      background-color: @divider;
+      height: 1px;
+      margin: 3px 10px;
+    }
+
+    .svg-box {
+      height: 14px !important;
+      width: 14px !important;
+      margin-right: 6px;
+    }
+
+    .tooltip-item-text {
+      white-space: nowrap;
+      margin-right: 8px;
+    }
+
+    .tooltip-item-desc {
+      margin-left: auto;
+      white-space: nowrap;
+      color: @color_desc;
+    }
+  }
+}

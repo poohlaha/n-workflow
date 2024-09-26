@@ -45,7 +45,6 @@ const StyleSelect: React.FC<IStyleConfigProps> = (props: IStyleConfigProps) => {
           values: childrens.length > 0 ? values.concat(backgrounds) : childObj.values || [],
           children,
         })
-        console.log(childObj)
       }
     }
 

@@ -223,3 +223,32 @@
     }
   }
 }
+
+.tooltip-device {
+  width: 275px;
+
+  .device-list {
+    font-size: @font_small;
+
+    .list-item {
+      height: 28px;
+      padding: 0 8px 0 0;
+
+      &:hover {
+        background: @background_hover;
+        border-radius: @border_radius_smaller;
+      }
+
+      svg {
+        margin-right: 12px;
+        color: @theme;
+        width: 8px !important;
+        height: 6px !important;
+      }
+
+      &.no-item-select {
+        padding-left: 32px;
+      }
+    }
+  }
+}

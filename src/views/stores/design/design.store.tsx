@@ -4,10 +4,10 @@
  * @author poohlaha
  */
 import { observable, action } from 'mobx'
-import { CONSTANT } from '@config/index'
 import { WebDeviceConfig } from '@views/config/index'
+import BaseStore from '@stores/base/base.store'
 
-class DesignStore {
+class DesignStore extends BaseStore {
   // WEB 设备列表
   readonly WEB_DEVICE_LIST: { [K: string]: { [T: string]: any } } = WebDeviceConfig
 

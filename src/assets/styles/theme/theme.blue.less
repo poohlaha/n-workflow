@@ -24,21 +24,23 @@
 
 // 常用颜色
 @disabled: #d3d2d1; // 失效颜色
-@color: #415058; // 颜色
+@color: #1f292e; // 颜色
 @color_shadow: rgba(0, 0, 0, 0.1); // shadow color
-@color_gray: #666666; // 正常灰色字体
+@color_gray: #7d8694; // 正常灰色字体
 @color_gray_light: #999999; // 灰色, 一般用于未选中 tab 等
 @color_gray_lighter: rgba(0, 0, 0, 0.88); // 浅黑色, 一般用于字体较浅颜色等
 @color_gray_lightest: rgba(0, 0, 0, 0.4); // 淡浅黑色, 一般用于字体较浅颜色等
 @color_border_gray: #f1f3f6; // border
 @color_normal: #37373b; // 普通或图标下方等字体颜色
 @color_button: #ffbf47; // 按钮颜色
-@color_svg: rgba(0, 0, 0, 0.85); // svg color
+@color_svg: rgba(0, 0, 0, 0.4); // svg color
+@color_svg_hover: rgba(0, 0, 0, 0.85); // svg color
 @color_menu_active: #363738; // 菜单激活颜色
 @color_expend: #252626;
 @color_resolve: #24292f; // resolve color
 @color_green: #52c41a; // 绿色
 @color_desc: #8d9ea7; // #9BA0B4
+@color_panel_color: #5b6b73;
 
 // 背景
 @background: #eff0f2; // 背景
@@ -56,6 +58,8 @@
 @border_theme: 1px solid @theme; // 主题色线条
 @border_button_plan: 1px solid #d2d7e3; // 扁平按钮边框
 @border_radius: 8px;
+@border_radius_small: 4px;
+@border_radius_smaller: 2px;
 
 // 其他
 @mask: rgba(0, 0, 0, 0.5); // 遮罩层颜色
@@ -93,11 +97,13 @@
   @color_normal,
   @color_button,
   @color_svg,
+  @color_svg_hover,
   @color_menu_active,
   @color_expend,
   @color_resolve,
   @color_green,
   @color_desc,
+  @color_panel_color,
 
   @background,
   @background_right,
@@ -114,6 +120,8 @@
   @border_theme,
   @border_button_plan,
   @border_radius,
+  @border_radius_small,
+  @border_radius_smaller,
 
   // 其他
   @mask,

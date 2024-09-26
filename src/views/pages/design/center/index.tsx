@@ -5,6 +5,7 @@
  */
 import React, { ReactElement } from 'react'
 import { observer } from 'mobx-react-lite'
+import DesignPageSetting from '@pages/design/popup/page-setting'
 
 const DesignCenter = (): ReactElement => {
   const render = () => {

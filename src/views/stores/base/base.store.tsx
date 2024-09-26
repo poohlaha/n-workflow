@@ -12,19 +12,8 @@ import { HttpRequest } from '@bale-web/request'
 
 export default class BaseStore {
   @observable loading: boolean = false
-  @observable currentPage: number = 1
-  @observable pageSize: number = 10
   readonly tokenName: string = 'token'
   readonly DOMAIN_PORT_REG = /^https?:\/\/[^\\/]+\/([^?#]+(\?[^#]*)?)?/
-
-  readonly API_DATA = {
-    localIp: '127.0.0.1',
-    version: '1.0',
-    appVersion: '1.0',
-    opStation: 'NA',
-    appId: 'KJMHWEB',
-    channel: 'web',
-  }
 
   readonly SUFFIXS: Array<string> = [
     'jpeg',
@@ -122,8 +111,7 @@ export default class BaseStore {
       requestUrl = process.env.API_ROOT + requestUrl
     }
 
-    let token = this.sm2Encrypt(`${Utils.getLocal(SYSTEM.LOCAL_TOKEN_NAME) || ''}_${new Date().getTime()}`)
-    console.log('token: ', Utils.getLocal(SYSTEM.LOCAL_TOKEN_NAME))
+    let token = Utils.getLocal(SYSTEM.LOCAL_TOKEN_NAME)
     let requestHeaders = {}
     if (!Utils.isObjectNull(headers)) {
       requestHeaders = headers
@@ -133,7 +121,6 @@ export default class BaseStore {
     let params: any = {
       url: requestUrl,
       data: {
-        ...this.API_DATA,
         requestId: Utils.generateUUID(),
         requestTime: Utils.formatDateStr(new Date(), 'yyyyMMddHHmmss'),
         data: {
@@ -249,90 +236,5 @@ export default class BaseStore {
     } else {
       download(url)
     }
-  }
-
-  /**
-   * sm2加密
-   */
-  sm2Encrypt(str: string = '') {
-    if (Utils.isBlank(str)) return ''
-    let publicKey = process.env.SM2_PUBLIC_KEY || ''
-    if (!publicKey.startsWith('04')) {
-      publicKey = `04${publicKey}`
-    }
-
-    // 1: C1C3C2 0: C1C2C3
-    return SmCrypto.sm2.doEncrypt(str, publicKey, 1)
-  }
-
-  /**
-   * 文件上传
-   */
-  async onUpload(options: { [K: string]: any } = {}, headers: { [K: string]: any } = {}) {
-    if (Utils.isObjectNull(options)) return
-
-    let requestHeaders = {}
-    let token = this.sm2Encrypt(`${Utils.getLocal(SYSTEM.LOCAL_TOKEN_NAME) || ''}_${new Date().getTime()}`)
-    console.log('token: ', Utils.getLocal(SYSTEM.LOCAL_TOKEN_NAME))
-
-    if (!Utils.isObjectNull(headers)) {
-      requestHeaders = headers
-    }
-
-    let requestUrl = options.url || ''
-    if (!requestUrl.startsWith('https://') && !requestUrl.startsWith('http://')) {
-      requestUrl = process.env.API_ROOT + requestUrl
-    }
-
-    // 测试环境设置禁用证书发送
-    if (process.env.APP_NODE_ENV === 'prod') {
-      process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
-    }
-
-    let type = options.responseStream ? '3' : '0'
-    await HttpRequest.send({
-      url: requestUrl,
-      headers: {
-        [this.tokenName]: token || '',
-        ...requestHeaders,
-      },
-      data: options.data,
-      method: options.method || '',
-      timeout: 500,
-      responseType: type,
-      success: (data: any = {}) => {
-        if (type !== '0') {
-          return options.success?.(data.body || null)
-        }
-
-        let body = data.body || {}
-        if (body.code !== '0' && body.code !== 0) {
-          // token 过期
-          if (body.code === SYSTEM.TOKEN_EXPIRED_CODE) {
-            TOAST.show({
-              message: COMMON.getLanguageText('TOKEN_EXPIRED_ERROR'),
-              type: 2,
-            })
-          } else {
-            TOAST.show({
-              message: COMMON.getLanguageText('ERROR_MESSAGE'),
-              type: 4,
-            })
-          }
-
-          return options.fail?.(body || {})
-        }
-
-        return options.success?.(body.data || {})
-      },
-      failed: async (res: any = {}) => {
-        if (res.code === SYSTEM.TOKEN_EXPIRED_CODE) {
-          // await this.getLoginUrl()
-        } else {
-          options.fail?.(res)
-        }
-      },
-      type: '2',
-    })
   }
 }

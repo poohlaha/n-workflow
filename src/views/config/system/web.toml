@@ -58,7 +58,7 @@ width = 1260
 height = 840
 
 [WEB.BACKSTAGE.CUSTOM]
-name = 'web_backstage_custom'
+name = 'custom'
 text = '自定义'
 width = 1024
 height = 768

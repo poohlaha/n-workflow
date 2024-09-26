@@ -5,7 +5,8 @@
  */
 import { observable, action } from 'mobx'
 import { CONSTANT } from '@config/index'
+import BaseStore from '@stores/base/base.store'
 
-class DesignCenterStore {}
+class DesignCenterStore extends BaseStore {}
 
 export default new DesignCenterStore()

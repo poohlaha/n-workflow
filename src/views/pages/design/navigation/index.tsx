@@ -9,7 +9,11 @@ import Navigation from '@views/components/navigation'
 import Tooltip from '@views/components/tooltip'
 import { useStore } from '@views/stores'
 
-const DesignNavigation = (): ReactElement => {
+interface IDesignNavigationProps {
+  onPageSetting?: () => void
+}
+
+const DesignNavigation = (props: IDesignNavigationProps): ReactElement => {
   const { designStore } = useStore()
 
   const getLeftNode = () => {
@@ -168,7 +172,12 @@ const DesignNavigation = (): ReactElement => {
         </div>
 
         <div className="page-setting flex-align-center">
-          <div className="flex-align-center page-setting-content cursor-pointer">
+          <div
+            className="flex-align-center page-setting-content cursor-pointer"
+            onClick={() => {
+              props.onPageSetting?.()
+            }}
+          >
             <div className="svg-box setting-svg-box flex-center">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="svg-icon setting-svg">
                 <path
